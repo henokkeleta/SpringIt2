@@ -1,0 +1,40 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class customerApp {
+
+	
+	
+		 public static void main(String[] args) throws Exception {
+		    	
+		    	// notice how the main method only calls the class
+		    	// and the class does all the work. This is a good design.
+		        MySQLHelper db = new MySQLHelper();
+		        db.readDataBase();
+		}
+}
+//	public static void displayMaxSalary() throws ClassNotFoundException, SQLException
+//
+//	{   
+//
+//	    String maxSalary;
+//	    Class.forName("com.mysql.jdbc.Driver");
+//	    Connection con = DriverManager.getConnection("jdbc:mysql://localhost/Customers?"
+//	              + "user=root&password=123");
+//	    PreparedStatement st = con.prepareStatement("select * from Customer order by salary desc limit 1");
+//	    ResultSet r1=st.executeQuery();
+//
+//	     if(r1.next()) {
+//
+//	           maxSalary =  r1.getString("fName")+""+r1.getString("lName");
+//	      }
+//
+//	     System.out.println("The name of employee who has the higher salary is :");
+//	     System.out.println( maxSalary);
+//
+//
+//	} //end-displayMaxSalary.
+//}

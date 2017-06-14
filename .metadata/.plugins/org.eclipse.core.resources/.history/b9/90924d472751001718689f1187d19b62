@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action ="myServlet" method="post">
+<input name="FullName" Type="submit" value="search me">
+ 
+ </form>
+</body>
+</html>

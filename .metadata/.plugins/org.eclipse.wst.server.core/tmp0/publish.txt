@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Wed Jun 14 14:04:22 EDT 2017
+org.eclipse.jst.jee.server\:CrabCake=/home/student/Downloads/sts-bundle/pivotal-tc-server-developer-3.2.4.SR1/base-instance/wtpwebapps/CrabCake
+org.eclipse.jst.jee.server\:feePracticePro=/home/student/Downloads/sts-bundle/pivotal-tc-server-developer-3.2.4.SR1/base-instance/wtpwebapps/feePracticePro
+org.eclipse.jst.jee.server\:CustomerServletProjects=/home/student/Downloads/sts-bundle/pivotal-tc-server-developer-3.2.4.SR1/base-instance/wtpwebapps/CustomerServletProjects

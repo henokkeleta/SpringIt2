@@ -1,0 +1,114 @@
+
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class WebCustomer
+ */
+@WebServlet("WebCustomer")
+public class WebCustomer extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public WebCustomer() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+  //create a connection first
+
+    private Connection connect = null;
+    private PreparedStatement statement = null;
+   // private t preparedStatement = null;
+   // private ResultSet resultSet = null;
+    private String lastName;
+    		
+   
+    
+            // This will load the MySQL driver, each DB has its own driver
+        	// The MySQL driver is a JAR file that must be in the Build Path
+        	
+        	
+        	
+     		
+            Class.forName("com.mysql.jdbc.Driver");
+            // Setup the connection with the DB
+            connect = DriverManager.getConnection("jdbc:mysql://localhost/Customers?user=root&password=password");
+
+            // Statements allow to issue SQL queries to the database
+            String sql="select * from customers  where `LastName`= ?";
+            statement = connect.prepareStatement(sql);
+            System.out.println("What is the LastName you are looking for");
+        	Scanner sc= new Scanner(System.in);
+        	String input =sc.nextLine();
+            // Result set get the result of the SQL query
+        	//customer person = new customer();
+        	person.setLastName(input);
+        	statement.setString(1,input);
+           // resultSet = statement.executeQuery();
+          
+
+            // PreparedStatements can use variables and are more efficient
+            // The primary reason to use prepared statements: More Secure!
+            // Secondary reason: you don't have to worry about quotes in your strings!
+           
+        	
+        	
+          /*  preparedStatement = connect
+                    .prepareStatement("Select * from Customers.customeres where `LastName`= values(?)");
+            */
+        	
+            
+           // preparedStatement.executeUpdate();
+
+          //  preparedStatement = connect.prepareStatement("SELECT myuser, webpage, datum, summary, COMMENTS from feedback.comments");
+           // resultSet = preparedStatement.executeQuery();
+          //  writeResultSet(resultSet);
+
+            // Remove again the insert comment
+//            preparedStatement = connect.prepareStatement("delete from feedback.comments where myuser= ? ; ");
+//            preparedStatement.setString(1, "Test");
+//            preparedStatement.executeUpdate();
+//
+//            resultSet = statement.executeQuery("select * from feedback.comments");
+            
+//            writeMetaData(resultSet);
+           
+}
+    }
+	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//Customer person =new Customer();
+		String LastName=request.getParameter("LastName");
+		String nextUrl="customer.JSP";
+		String message = "the customer is :";
+		String FirstName=request.getParameter("FirstName");
+		//String LastName=request.getParameter("LasstName");
+		String Title=request.getParameter("Title");
+		String StreetAddress=request.getParameter("StreetAddress");
+		String city=request.getParameter("City");
+		String State=request.getParameter("State");
+		String ZipCode=request.getParameter("ZipCode");
+		//request.setAttribute("message", message);
+		//System.out.println("FirstName:"+"FirstName");
+		getServletContext().getRequestDispatcher(nextUrl).forward(request, response);
+		
+	}
+
+}

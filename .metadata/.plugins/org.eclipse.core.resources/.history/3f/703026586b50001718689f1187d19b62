@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input from the user</title>
+</head>
+<body>
+  <form action = "customer " method="post">
+  <p>LastName:<input>type:"text"></p>
+  </form>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+INDEX VERSION 1.3+/home/student/Documents/workspaceHenok/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3662522544.index
+1013937631.index
+4109060284.index
+1016845437.index
+182197019.index
+1342265480.index
+1259890756.index
+2932452487.index
