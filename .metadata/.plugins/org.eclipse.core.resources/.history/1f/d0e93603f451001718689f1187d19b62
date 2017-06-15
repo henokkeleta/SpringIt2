@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "ResumeServlet" method = "post">
+Full Name:<input type = "text" name = "FullName" >
+Email:<input type = "text" name = "Email" >
+<input type = "Submit" value = "Submit">
+</form>
+<h2>Education</h2>
+<p>Enter your education here</p>
+<form action = "ResumeServlet" method = "post">
+University:<input type = "text" name = "Education" >
+what field:<input type = "text" name = "Education" >
+Graduated year:<input type = "text" name = "Education" >
+<input type = "Submit" value = "Submit">
+</form>
+</body>
+</html>

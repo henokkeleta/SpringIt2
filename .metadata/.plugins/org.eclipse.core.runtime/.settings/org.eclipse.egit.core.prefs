@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=/home/student/Documents/workspaceHenok/CustomerDBServlet/.git\:
-GitRepositoriesView.GitDirectories.relative=CustomerDBServlet/.git\:
+GitRepositoriesView.GitDirectories=/home/student/Documents/workspaceHenok/.git\:/home/student/Documents/workspaceHenok/CustomerDBServlet/.git\:
+GitRepositoriesView.GitDirectories.relative=.git\:CustomerDBServlet/.git\:
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
