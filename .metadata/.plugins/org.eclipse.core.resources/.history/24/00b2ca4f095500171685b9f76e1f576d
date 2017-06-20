@@ -1,0 +1,31 @@
+package Resumes;
+
+import java.util.ArrayList;
+
+public class person {
+	private String personid;
+  private String FirstName;
+  private String LastName;
+  private String Email;
+  private  ArrayList<Job> myjoblists;
+ 
+private ArrayList<Education> myedulists;
+  private ArrayList<Skills> myskilllists;
+  
+  
+	public Person(String pfname, String planame,String pemail) 
+	{ 
+		this.FirstName=pfname;
+		this.LastName=planame;
+		this.Email=pemail;
+		myjoblists=new ArrayList<Job>();
+		myedulists=new ArrayList<Education>();
+		myskilllists=new ArrayList<Skills>();
+	}
+  }
+  
+  
+  
+  
+  
+ 

@@ -1,0 +1,111 @@
+package Resumes;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class person {
+	private String personid;
+  private String FirstName;
+  private String LastName;
+  private String Email;
+  private  ArrayList<Job> myjoblists;
+ 
+private ArrayList<Education> myedulists;
+  private ArrayList<Skills> myskilllists;
+  
+  
+	public person(String pfname,String planame,String pemail) 
+	{ 
+		this.FirstName=pfname;
+		this.LastName=planame;
+		this.Email=pemail;
+		myjoblists=new ArrayList<Job>();
+		myedulists=new ArrayList<Education>();
+		myskilllists=new ArrayList<Skills>();
+	}
+
+
+	public String getFirstName() {
+		return FirstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return LastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+
+
+	public String getEmail() {
+		return Email;
+	}
+
+
+	public void setEmail(String email) {
+		Email = email;
+	}
+
+
+	public String getPersonid() {
+		return personid;
+	}
+
+
+	public void setPersonid(String personid) {
+		this.personid = personid;
+	}
+	public int addme()
+	{ 
+		  Connection con = null;
+	 
+	     PreparedStatement stmt = null;
+	     ResultSet rs = null;
+	     int personID;
+	     String isertsql;
+	     String getIDSQL;
+	     isertsql="insert into persontable(FirstName, LastName,Email) values(?,?,?)";
+	     getIDSQL="select * from persontable where email=?";
+	     try { 
+	    	   class.ForName("com.mysql.jdbc.Driver");
+	    	         con=DriverManger.getConnection("jdbc:mysql://localhost/resume?user=root&password=password");
+	    	         stmt=con.prepareStatement(isertsql);
+	    			 stmt.setString(1, this.FirstName);
+	    	         stmt.setString(2, this.LasstName);
+	    	         stmt.setString(1, this.Email);
+	    	         stm.executeUpdate();
+	    	         //we need to prepare another statment
+	    	         stmt=con.prepareStatement(getIDSQL);
+	    	         stmt.setString(1, this.Email);
+	    	         rs.getStatement().executeQuery();
+	    	         //we need to tell it where to go and fetch that
+	    	         rs.next();
+	    	         rs.getInt("id");
+	    	         
+	     }catch(ClassNotFoundException e)
+	     { 
+	    	 e.printStackTrace();
+	     }catch(SQLException e)
+	     { 
+	    	 e.printStackTrace();
+	     }
+	}
+  }
+  
+  
+  
+  
+  
+ 

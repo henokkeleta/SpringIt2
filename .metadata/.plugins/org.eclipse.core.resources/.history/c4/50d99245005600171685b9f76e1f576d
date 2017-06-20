@@ -1,0 +1,10 @@
+package Resumes;
+
+public class ResumeAppTest {
+
+	public static void main(String[] args) {
+		person me = new Person("Henok","Berhe","heniken05@yahoo.com");// TODO Auto-generated method stub
+  System.out.println("your full name is : "+me.getFirstName()+" "+me.getLastName()+"and your email is "+me.getEmail();
+	}
+
+}

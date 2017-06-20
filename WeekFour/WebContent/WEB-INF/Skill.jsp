@@ -8,16 +8,16 @@
 </head>
 <body>
 <form action = "" method = "post">
-Skill 1:<input type = "text" name = "Skill" >
-Skill 2:<input type = "text" name = "Skill" >
-Skill 3:<input type = "text" name = "Skill" >
-Skill 4:<input type = "text" name = "Skill" >
-Skill 5:<input type = "text" name = "Skill" >
-Skill 6:<input type = "text" name = "Skill" >
-Skill 7:<input type = "text" name = "Skill" >
-Skill 8:<input type = "text" name = "Skill" >
-Skill 9:<input type = "text" name = "Skill" >
-Skill 10:<input type = "text" name = "Skill" >
+Skill 1:<input type = "text" name = "Skill1" >
+Skill 2:<input type = "text" name = "Skill2" >
+Skill 3:<input type = "text" name = "Skill3" >
+Skill 4:<input type = "text" name = "Skill4" >
+Skill 5:<input type = "text" name = "Skill5" >
+Skill 6:<input type = "text" name = "Skill6" >
+Skill 7:<input type = "text" name = "Skill7" >
+Skill 8:<input type = "text" name = "Skill8" >
+Skill 9:<input type = "text" name = "Skill9" >
+Skill 10:<input type = "text"name = "Skill10">
 <input type = "Submit" value = "Submit">
 </form>
 </body>

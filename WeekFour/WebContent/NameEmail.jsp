@@ -7,22 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action = "NameEmail.jsp" method = "post">
+<form action = "NameEmailServlet" method = "post">
 Full Name:<input type = "text" name = "FullName" >
 Email:<input type = "text" name = "Email" >
 <input type = "Submit" value = "Submit">
+
 </form>
-<h2>${message}</h2>
-<h2>${message1}</h2>
-<h2>${message2}</h2>
-<h2>${message3}</h2>
-<h2>${message4}</h2>
-<h2>${message5}</h2>
-<h2>${message6}</h2>
-<h2>${message7}</h2>
-<h2>${message8}</h2>
-<h2>${message9}</h2>
-<h2>${message10}</h2>
-<h2>${message11}</h2>
+
+
 </body>
 </html>

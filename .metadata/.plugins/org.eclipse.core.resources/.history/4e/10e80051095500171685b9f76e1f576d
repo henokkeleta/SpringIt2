@@ -1,0 +1,10 @@
+package Resumes;
+
+import java.time.LocalDateTime;
+
+public class Job {
+  private String jtitile="";
+  private String jcompany="";
+  LocalDateTime sdate;
+  LocalDateTime edate;
+}

@@ -1,0 +1,13 @@
+package com.example.demo;
+
+
+
+public class Hello {
+    int id=0;
+    String content=null;
+	String name=null;
+	
+   // {"id":1, "content":"Hello, World!"}
+	//GET /http://localhost:8080/greeting?name=User/
+	
+}

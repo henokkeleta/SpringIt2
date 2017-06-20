@@ -43,15 +43,15 @@ public class ResumeServlet extends HttpServlet {
 	     Statement statement = null;
 	     PreparedStatement preparedStatement = null;
 	     ResultSet resultSet = null;
-	   //  String lastname;
+	  
 	     HttpSession session = request.getSession();
 	     String nextURL = "/NameEmail.jsp";
 	     
 		try{ 
 
-			 Class.forName("com.mysql.jdbc.Driver");
-			 connect = DriverManager.getConnection("jdbc:mysql://localhost/ResumeMembers.Resume?user=root&password=password");
-			 preparedStatement = connect.prepareStatement("insert into Resume(PersonId, FullName,Email,Education,WorkExperience,Skill)values(default, ?, ?,?,?,?)");
+			// Class.forName("com.mysql.jdbc.Driver");
+			 //connect = DriverManager.getConnection("jdbc:mysql://localhost/ResumeMembers?user=root&password=password");
+			// preparedStatement = connect.prepareStatement("insert into Resume(PersonId, FullName,Email,Education,WorkExperience,Skill)values(default, ?, ?,?,?,?)");
 			//the next steps should be to mutate my previous resume class..it should fit in or 
 			   // preparedStatement.setString(1, "PersonID");
 			 
@@ -73,8 +73,8 @@ public class ResumeServlet extends HttpServlet {
 	            preparedStatement.setString(4, workExperience);
 	            preparedStatement.setString(5, skill);
 	            preparedStatement.executeUpdate();
-	           resultSet = preparedStatement.executeQuery();
-	           writeResultSet(resultSet);
+	           //resultSet = preparedStatement.executeUpdate();
+	          // writeResultSet(resultSet);
 	          
 	           // session.setAttribute("message", personID);
 	        	session.setAttribute("message1", fullName);
